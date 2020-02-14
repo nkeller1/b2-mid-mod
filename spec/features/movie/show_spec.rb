@@ -35,10 +35,12 @@ RSpec.describe Actor, type: :feature do
       movie_1.actors << [actor_1]
 
       visit "/movies/#{movie_1.id}"
+
       expect(page).to have_content(actor_1.name)
       expect(page).to_not have_content(actor_2.name)
 
       fill_in :name, with: actor_2.name
+      click_on "Add Actor to Movie"
 
       expect(current_path).to eq("/movies/#{movie_1.id}")
       expect(page).to have_content(actor_2.name)
