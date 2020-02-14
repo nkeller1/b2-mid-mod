@@ -5,7 +5,8 @@ class MoviesController < ApplicationController
 
   def update
     movie = Movie.find(params[:id])
-    actor = Actor.where(name = params[:name])
+    name = params[:name]
+    actor = Actor.find_by(name: name)
     movie.actors << actor
     redirect_to "/movies/#{movie.id}"
   end

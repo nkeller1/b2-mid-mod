@@ -44,7 +44,6 @@ RSpec.describe Actor, type: :feature do
 
       expect(current_path).to eq("/movies/#{movie_1.id}")
       expect(page).to have_content(actor_2.name)
-
     end
   end
 end
