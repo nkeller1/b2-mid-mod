@@ -4,6 +4,9 @@ class MoviesController < ApplicationController
   end
 
   def update
-    require "pry"; binding.pry
+    movie = Movie.find(params[:id])
+    actor = Actor.where(name = params[:name])
+    movie.actors << actor
+    redirect_to "/movies/#{movie.id}"
   end
 end
