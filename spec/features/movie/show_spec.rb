@@ -47,14 +47,3 @@ RSpec.describe Actor, type: :feature do
     end
   end
 end
-
-
-
-# Story 4
-# As a user,
-# When I visit a movie show page,
-# I see a form for an actors name
-# and when I fill in the form with an existing actor's name
-# I am redirected back to that movie's show page
-# And I see the actor's name listed
-# (This should not break story 3, You do not have to test for a sad path)
