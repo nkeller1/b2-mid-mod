@@ -14,10 +14,12 @@ As a user,
 When I visit the studio index page
 I see a list of all of the movie studios
 And underneath each studio, I see the names of all of its movies.
+
 Story 2
 As a user,
 When I visit an actor's show page,
 I see their name, their age, and a list of the names of all of the movies they are in.
+
 Story 3
 As a user,
 When I visit a movie's show page.
