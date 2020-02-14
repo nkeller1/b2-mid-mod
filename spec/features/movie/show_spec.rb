@@ -25,12 +25,3 @@ RSpec.describe Actor, type: :feature do
     end
   end
 end
-
-
-
-# Story 3
-# As a user,
-# When I visit a movie's show page.
-# I see the movie's name, creation year, and genre,
-# and a list of all its actors from youngest to oldest.
-# And I see the average age of all of the movie's actors
