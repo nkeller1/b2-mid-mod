@@ -1,3 +1,6 @@
+require 'rails_helper'
+
+
 RSpec.describe Studio, type: :feature do
   describe "studio index page" do
     it "can see a list of all of the movie studios" do
@@ -20,8 +23,6 @@ RSpec.describe Studio, type: :feature do
        expect(page).to have_content(studio_2.name)
        expect(page).to have_content(movie_3.name)
      end
-
-     
     end
   end
 end
