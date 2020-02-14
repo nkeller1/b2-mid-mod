@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 20200214172502) do
 
   create_table "movies", force: :cascade do |t|
     t.string "name"
+    t.string "genre"
+    t.integer "year"
     t.bigint "studio_id"
     t.index ["studio_id"], name: "index_movies_on_studio_id"
   end
