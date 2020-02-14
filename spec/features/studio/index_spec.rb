@@ -16,8 +16,9 @@ RSpec.describe Studio, type: :feature do
      within "#studio-#{studio_1.id}" do
        expect(page).to have_content(studio_1.name)
        expect(page).to have_content(movie_1.name)
-       expect(page).to have_content(movie2.name)
+       expect(page).to have_content(movie_2.name)
      end
+
 
      within "#studio-#{studio_2.id}" do
        expect(page).to have_content(studio_2.name)
