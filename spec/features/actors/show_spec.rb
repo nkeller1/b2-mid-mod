@@ -6,8 +6,8 @@ RSpec.describe Actor, type: :feature do
     it "can see the actors information" do
       studio_1 = Studio.create(name: "Theee Studio")
 
-      movie_1 = Movie.create(name: "Backlash", studio: studio_1)
-      movie_2 = Movie.create(name: "Frontlash", studio: studio_1)
+      movie_1 = Movie.create(name: "Backlash", genre: "action", year: 2019, studio: studio_1)
+      movie_2 = Movie.create(name: "Frontlash", genre: "fantasy", year: 2012, studio: studio_1)
 
       actor_1 = Actor.create(name: "Bruce Willis", age: 60)
 
@@ -24,8 +24,8 @@ RSpec.describe Actor, type: :feature do
     it "shows a unique list of all of the actors this actor has worked with" do
       studio_1 = Studio.create(name: "Theee Studio")
 
-      movie_1 = Movie.create(name: "Backlash", studio: studio_1)
-      movie_2 = Movie.create(name: "Frontlash", studio: studio_1)
+      movie_1 = Movie.create(name: "Backlash", genre: "action", year: 2019, studio: studio_1)
+      movie_2 = Movie.create(name: "Frontlash", genre: "fantasy", year: 2012, studio: studio_1)
 
       actor_1 = Actor.create(name: "Bruce Willis", age: 60)
       actor_2 = Actor.create(name: "J-Law", age: 20)

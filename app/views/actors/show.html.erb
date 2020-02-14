@@ -1,5 +1,4 @@
 
-
 <%= @actor.name %>
 <%= @actor.age %>
 
@@ -7,3 +6,12 @@
 <% @actor.movies.each do |movie| %>
 <%= movie.name %>
 <% end  %>
+
+<h2> <%= "Actors #{@actor.name} has worked with:"%> </h2>
+
+<% @actor.actor_movies.each do |movie| %>
+<% movie.actor.name do |actor|  %>
+<%= require "pry"; binding.pry %>
+  <%= actor.name %>
+  <% end %>
+<% end %>
