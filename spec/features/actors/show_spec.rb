@@ -9,8 +9,9 @@ RSpec.describe Actor, type: :feature do
       movie_1 = Movie.create(name: "Backlash", studio: studio_1)
       movie_2 = Movie.create(name: "Frontlash", studio: studio_1)
 
-      actor_1 = movie_1.Actor.create(name: "Bruce Willis", age: 60)
-      # movie_2.Actor.create(name:"Bruce Willis", age: 60)
+      actor_1 = Actor.create(name: "Bruce Willis", age: 60)
+
+      actor_1.movies << [movie_1, movie_2]
 
       visit "/actors/#{actor_1.id}"
 
